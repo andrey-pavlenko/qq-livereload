@@ -1,0 +1,35 @@
+{
+  "name": "qq-livereload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:server": "tsc --build server",
+    "build:browser": "rollup -c browser/rollup.config.js",
+    "build": "rm -rf build/* && npm run build:server && npm run build:browser",
+    "watch:browser": "rollup -w -c browser/rollup.config.js",
+    "watch:server": "npm run build:server -- -w --incremental --preserveWatchOutput",
+    "dev": "concurrently \"npm run watch:server\" \"npm run watch:browser\" \"nodemon --delay 500ms -w build build/index.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@types/node": "^14.0.27",
+    "@types/ws": "^7.2.6",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "concurrently": "^5.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "rollup": "^2.23.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "ws": "^7.3.1"
+  }
+}
