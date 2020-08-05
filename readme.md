@@ -3,14 +3,16 @@
 ## How it works
 
 1. Starts HTTP server (params hardcoded)
-2. Start FS watcher (parsms hardcoded)
-3. `livereload.js` connect to server via WedSocket
-4. When FS changed server send message `reload`
+2. Start FS watcher (params hardcoded)
+3. `livereload.js` connects to server via WedSocket
+4. When FS changed server sends message `reload`
 
 ## How to use
 
-1. Start server `npm run start`
-2. Add `livereload.js` to code.
+1. Install dependencies `npm i`
+2. Build `npm run build`
+3. Start server `npm run start`
+4. Add `livereload.js` to code.
 
 Examples:
 

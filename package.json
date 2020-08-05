@@ -10,6 +10,7 @@
     "watch:browser": "rollup -w -c browser/rollup.config.js",
     "watch:server": "npm run build:server -- -w --incremental --preserveWatchOutput",
     "dev": "concurrently \"npm run watch:browser\" \"npm run watch:server\" \"nodemon --delay 500ms -w build build/index.js\"",
+    "start": "node build/index.js | pino-pretty -t \"SYS:yy-mm-dd HH:MM:ss\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
