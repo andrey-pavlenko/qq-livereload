@@ -1,6 +1,7 @@
 {
   "exclude": ["build", "node_modules"],
   "compilerOptions": {
-    "outDir": "build"
+    "outDir": "build",
+    "esModuleInterop": true
   }
 }

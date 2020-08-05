@@ -1,10 +1,9 @@
-import httpServer from './http-server';
-import wsServer from './ws-server';
+// import './http-server';
+// import wsServer from './ws-server';
+// import { broadcast } from './ws-server';
+// import log from './logger';
 
-// eslint-disable-next-line no-console
-console.info(wsServer);
-
-httpServer.on('upgrade', (req, socket, head) => {
-  // eslint-disable-next-line no-console
-  console.info('server upgrade', req.url);
-});
+// setInterval(() => {
+//   broadcast('reload');
+//   log.debug('WebServer clients: %d', wsServer.clients.size);
+// }, 5000);
