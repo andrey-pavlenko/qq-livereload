@@ -3,8 +3,8 @@
 ## How it works
 
 1. Starts HTTP server (params hardcoded)
-2. Start FS watcher (params hardcoded)
-3. `livereload.js` connects to server via WedSocket
+2. Starts FS watcher (params hardcoded)
+3. `livereload.js` connects to server via WebSocket
 4. When FS changed server sends message `reload`
 
 ## How to use
